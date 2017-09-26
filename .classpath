@@ -2,5 +2,12 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="src/lib/spigot1.12.jar"/>
+	<classpathentry kind="lib" path="src/lib/Vault.jar"/>
+	<classpathentry kind="lib" path="src/lib/worldguard-6.2.1.jar"/>
+	<classpathentry kind="lib" path="src/lib/worldedit-bukkit-6.1.7.3.jar"/>
+	<classpathentry kind="lib" path="src/lib/Factions.jar"/>
+	<classpathentry kind="lib" path="src/lib/FactionsUUID.jar"/>
+	<classpathentry kind="lib" path="src/lib/MassiveCore.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
