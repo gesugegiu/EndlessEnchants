@@ -16,6 +16,7 @@ import java.util.UUID;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -37,6 +38,7 @@ public class Swords implements Listener {
 	private HashMap<UUID, Integer> rageLevel = new HashMap<>();
 	private HashMap<UUID, BukkitTask> inRage = new HashMap<>();
 	
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.MONITOR)
 	public void onPlayerDamage(EntityDamageByEntityEvent e) {
 		if(!e.isCancelled()) {
@@ -183,6 +185,17 @@ public class Swords implements Listener {
 										}
 									}
 								}
+								if(Main.CE.hasEnchantment(It, CEnchantments.FROZEN)) {
+									if(CEnchantments.FROZEN.isEnabled()) {
+										if(en instanceof Player) {
+											Player player = (Player) en; //Chi attacco, subisce danno
+											System.out.println(player.getHealth() + player.getName());
+											if(damager.getHealth() <= 8){
+												player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 5000));
+											}
+										}
+									}
+								}
 								if(Main.CE.hasEnchantment(It, CEnchantments.LIFESTEAL)) {
 									if(CEnchantments.LIFESTEAL.isEnabled()) {
 										int steal = Main.CE.getPower(It, CEnchantments.LIFESTEAL);
@@ -274,6 +287,21 @@ public class Swords implements Listener {
 											if(!event.isCancelled()) {
 												damager.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 3 + (Main.CE.getPower(It, CEnchantments.EXECUTE)) * 20, 3));
 											}
+										}
+									}
+								}
+								if(Main.CE.hasEnchantment(It, CEnchantments.KNOCKBACK)) {
+									if(CEnchantments.KNOCKBACK.isEnabled()) {
+										if(en.getHealth() <= 2) {
+											EnchantmentUseEvent event = new EnchantmentUseEvent(damager, CEnchantments.KNOCKBACK, It);
+											Bukkit.getPluginManager().callEvent(event);
+											if(!event.isCancelled()) {
+												Player player = (Player) en;
+												player.getItemInHand().addEnchantment(Enchantment.KNOCKBACK, 3);
+											}
+										}else{
+											Player player = (Player) en;
+											player.getItemInHand().removeEnchantment(Enchantment.KNOCKBACK);
 										}
 									}
 								}

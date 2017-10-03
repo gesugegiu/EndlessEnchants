@@ -77,6 +77,23 @@ public class Axes implements Listener {
 								}
 							}
 						}
+						if(Main.CE.hasEnchantment(item, CEnchantments.CONFUSIONAXE)) {
+							if(CEnchantments.CONFUSIONAXE.isEnabled()) {
+									en.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 2));
+							}
+						}
+						if(Main.CE.hasEnchantment(item, CEnchantments.DANNODOPPIO)){
+							if(CEnchantments.DANNODOPPIO.isEnabled()){
+								double damage = e.getDamage() * 2;
+								if(Methods.randomPicker((20 - Main.CE.getPower(item, CEnchantments.DANNODOPPIO)))) {
+									EnchantmentUseEvent event = new EnchantmentUseEvent(damager, CEnchantments.DANNODOPPIO, item);
+									Bukkit.getPluginManager().callEvent(event);
+									if(!event.isCancelled()) {
+										e.setDamage(damage);
+									}
+								}
+							}
+						}
 						if(Main.CE.hasEnchantment(item, CEnchantments.REKT)) {
 							if(CEnchantments.REKT.isEnabled()) {
 								double damage = e.getDamage() * 2;
@@ -107,6 +124,18 @@ public class Axes implements Listener {
 									Bukkit.getPluginManager().callEvent(event);
 									if(!event.isCancelled()) {
 										en.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, (Main.CE.getPower(item, CEnchantments.DIZZY) + 9) * 20, 0));
+									}
+								}
+							}
+						}
+						if(Main.CE.hasEnchantment(item, CEnchantments.WITHERAXE)) {
+							if(CEnchantments.WITHERAXE.isEnabled()) {
+								if(Methods.randomPicker(11 - (Main.CE.getPower(item, CEnchantments.WITHERAXE)))) {
+									EnchantmentUseEvent event = new EnchantmentUseEvent(damager, CEnchantments.WITHERAXE, item);
+									Bukkit.getPluginManager().callEvent(event);
+									if(!event.isCancelled()) {
+										en.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 10 * 20, 2));
+										en.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 10*20, 2));
 									}
 								}
 							}

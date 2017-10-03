@@ -1,9 +1,26 @@
+#########################################################################################################################
+#                                                                                                                       #
+#                         ███████╗███╗   ██╗██████╗ ██╗     ███████╗███████╗███████╗                                    #                
+#                         ██╔════╝████╗  ██║██╔══██╗██║     ██╔════╝██╔════╝██╔════╝                                    #          
+#                         █████╗  ██╔██╗ ██║██║  ██║██║     █████╗  ███████╗███████╗                                    #                
+#                         ██╔══╝  ██║╚██╗██║██║  ██║██║     ██╔══╝  ╚════██║╚════██║                                    #               
+#                         ███████╗██║ ╚████║██████╔╝███████╗███████╗███████║███████║                                    #                
+#                         ╚══════╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚══════╝╚══════╝╚══════╝                                    #             
+#                                                                                                                       #                
+#                   ████████╗███████╗ █████╗ ███╗   ███╗██╗    ██╗ ██████╗ ██████╗ ██╗  ██╗                             #                
+#                   ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║    ██║██╔═══██╗██╔══██╗██║ ██╔╝                             #                
+#                      ██║   █████╗  ███████║██╔████╔██║██║ █╗ ██║██║   ██║██████╔╝█████╔╝                              #                
+#                      ██║   ██╔══╝  ██╔══██║██║╚██╔╝██║██║███╗██║██║   ██║██╔══██╗██╔═██╗                              #                
+#                      ██║   ███████╗██║  ██║██║ ╚═╝ ██║╚███╔███╔╝╚██████╔╝██║  ██║██║  ██╗                             #                
+#                      ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝                             #                
+#                                                                                                                       #
+#########################################################################################################################
 Settings:
-  Prefix: '&8[&aCrazyEnchants&8]: ' #The prefix in the messages
+  Prefix: '&8[&aEndlessEnchants&8]: ' #The prefix in the messages
   Update-Checker: true #Toggle on and off if you get a update message when you join if there is a new update.
   Player-Info-Backup-Message: true #Toggle this on and off if you wish to see when the players data gets backed up.
   Reset-Players-Max-Health: true #This is for some servers that get a health duplication glitch from plugins like CombatTagPlus(v1.2.3 down)
-  InvName: '&4&l&nCrazy Enchanter' #The name of the /CE inventory
+  InvName: '&4&l&nEndlessEnchanter' #The name of the /CE inventory
   Enchantment-Book-Item: '340' #The item that the enchantment book is.
   Enchantment-Book-Glowing: true #Toggle on or off if the book will have an enchanted look.
   GUISize: 54 #The size of the GUI, must be a factor of 9
@@ -284,49 +301,49 @@ Settings:
       Currency: Vault
   SignOptions: #Options for the Signs.
     CategoryShopStyle: #What the sign will look like. The price will be determined by the category you pick
-      Line1: '&b&lCrazy Enchant' #Line 1 of the sign
+      Line1: '&b&lEndlessEnchant' #Line 1 of the sign
       Line2: '&b&lShop:' #Line 2 of the sign
       Line3: '&2&l%Category%' #Line 3 of the sign
       Line4: '&c&lCost: &6&l%Cost%XP' #Line 4 of the sign
       Buy-Message: '&7You have just bought an enchantment book, and it is %BookName%&7 from the %Category%&7 tier.'
     ProtectionCrystalStyle: 
-      Line1: '&b&lCrazy Enchant'
+      Line1: '&b&lEndlessEnchant'
       Line2: '&b&lShop:'
       Line3: '&5&lProtection &b&lCrystal'
       Line4: '&c&lCost: &a&l$500'
       Buy-Message: '&7You have just bought a &5&lProtection &b&lCrystal.' #Message when buying an item.
     ScramblerStyle: 
-      Line1: '&b&lCrazy Enchant'
+      Line1: '&b&lEndlessEnchant'
       Line2: '&b&lShop:'
       Line3: '&e&lScrambler'
       Line4: '&c&lCost: &a&l$800'
       Buy-Message: '&7You have just bought a &e&lThe Grand Scrambler&7.' #Message when buying an item.
     SuccessDustStyle: 
-      Line1: '&b&lCrazy Enchant'
+      Line1: '&b&lEndlessEnchant'
       Line2: '&b&lShop:'
       Line3: '&e&lMagical Angel Dust'
       Line4: '&c&lCost: &a&l$500'
       Buy-Message: '&7You have just bought a &aMagical Angel Dust&7.'
     DestroyDustStyle: 
-      Line1: '&b&lCrazy Enchant'
+      Line1: '&b&lEndlessEnchant'
       Line2: '&b&lShop:'
       Line3: '&e&lMagical Fixing Dust'
       Line4: '&c&lCost: &a&l$500'
       Buy-Message: '&7You have just bought a &eMagical Fixing Dust&7.'
     BlackScrollStyle: 
-      Line1: '&b&lCrazy Enchant'
+      Line1: '&b&lEndlessEnchant'
       Line2: '&b&lShop:'
       Line3: '&4&lBlack &8&lScrolls'
       Line4: '&c&lCost: &a&l$1000'
       Buy-Message: '&7You have just bought a &8&l&nBlack Scroll&7.'
     WhiteScrollStyle:
-      Line1: '&b&lCrazy Enchant'
+      Line1: '&b&lEndlessEnchant'
       Line2: '&b&lShop:'
       Line3: '&f&lWhite &b&lScrolls'
       Line4: '&c&lCost: &a&l$2000'
       Buy-Message: '&7You have just bought a &e&lWhite Scroll&7.'
     TransmogScrollStyle:
-      Line1: '&b&lCrazy Enchant'
+      Line1: '&b&lEndlessEnchant'
       Line2: '&b&lShop:'
       Line3: '&d&lTransmog &b&lScrolls'
       Line4: '&c&lCost: &a&l$200'

@@ -78,7 +78,7 @@ public class Methods {
 	}
 	
 	public static boolean hasPermission(Player player, String perm, Boolean toggle) {
-		if(player.hasPermission("crazyenchantments." + perm) || player.hasPermission("crazyenchantments.admin")) {
+		if(player.hasPermission("endlessenchantments." + perm) || player.hasPermission("endlessenchantments.admin")) {
 			return true;
 		}else {
 			if(toggle) {
@@ -91,7 +91,7 @@ public class Methods {
 	public static boolean hasPermission(CommandSender sender, String perm, Boolean toggle) {
 		if(sender instanceof Player) {
 			Player player = (Player) sender;
-			if(player.hasPermission("crazyenchantments." + perm) || player.hasPermission("crazyenchantments.admin")) {
+			if(player.hasPermission("endlessenchantments." + perm) || player.hasPermission("endlessenchantments.admin")) {
 				return true;
 			}else {
 				if(toggle) {

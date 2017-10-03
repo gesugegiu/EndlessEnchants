@@ -41,6 +41,27 @@ Enchantments:
       - 'Common'
       - 'Rare'
       - 'Legendary'
+  Power:
+    Enabled: True
+    Name: 'Power'
+    Color: '&7'
+    BookColor: '&b&l'
+    MaxPower: 1
+    Info:
+      Name: '&e&lPower &7(&bI&7)'
+      Description:
+        - '&7Gives strenght and slowness'
+        - '&7when you put it on.'
+        - ''
+        - '&6Found in:'
+        - '&7 - &a&l&nCommon'
+        - '&7 - &9&l&nRare'
+        - '&7 - &4&l&nLegendary'
+        - '&6Enchantable Items: &aArmor'
+    Categories:
+      - 'Common'
+      - 'Rare'
+      - 'Legendary'
   Piercing:
     Enabled: True
     Name: 'Piercing'
@@ -175,6 +196,27 @@ Enchantments:
     MaxPower: 3
     Info:
       Name: '&e&lMermaid &7(&bI-&bIII&7)'
+      Description:
+        - '&7Gives you water breathing'
+        - '&7when you put it on.'
+        - ''
+        - '&6Found in:'
+        - '&7 - &a&l&nCommon'
+        - '&7 - &9&l&nRare'
+        - '&7 - &4&l&nLegendary'
+        - '&6Enchantable Items: &aHelmets'
+    Categories:
+      - 'Common'
+      - 'Rare'
+      - 'Legendary'
+  Sub:
+    Enabled: True
+    Name: 'Sub'
+    Color: '&7'
+    BookColor: '&b&l'
+    MaxPower: 3
+    Info:
+      Name: '&e&lSub &7(&bI-&bIII&7)'
       Description:
         - '&7Gives you water breathing'
         - '&7when you put it on.'
@@ -493,6 +535,48 @@ Enchantments:
       Description:
         - '&7Has a chance to'
         - '&7feed you while fightning.'
+        - ''
+        - '&6Found in:'
+        - '&7 - &a&l&nCommon'
+        - '&7 - &9&l&nRare'
+        - '&7 - &4&l&nLegendary'
+        - '&6Enchantable Items: &aAxes'
+    Categories:
+      - 'Common'
+      - 'Rare'
+      - 'Legendary'
+  DannoDoppio:
+    Enabled: True
+    Name: 'DannoDoppio'
+    Color: '&7'
+    BookColor: '&b&l'
+    MaxPower: 5
+    Info:
+      Name: '&e&lDoppioDanno &7(&bI-&bV&7)'
+      Description:
+        - '&7Doppio danno'
+        - '&7quando combatti.'
+        - ''
+        - '&6Found in:'
+        - '&7 - &a&l&nCommon'
+        - '&7 - &9&l&nRare'
+        - '&7 - &4&l&nLegendary'
+        - '&6Enchantable Items: &aAxes'
+    Categories:
+      - 'Common'
+      - 'Rare'
+      - 'Legendary'
+  ConfusionAxe:
+    Enabled: True
+    Name: 'ConfusionAxe'
+    Color: '&7'
+    BookColor: '&b&l'
+    MaxPower: 5
+    Info:
+      Name: '&e&lConfusionAxe &7(&bI-&bV&7)'
+      Description:
+        - '&7Give confusion potion'
+        - '&7to your damager'
         - ''
         - '&6Found in:'
         - '&7 - &a&l&nCommon'
@@ -965,6 +1049,27 @@ Enchantments:
       - 'Common'
       - 'Rare'
       - 'Legendary'
+  KnockBack:
+    Enabled: True
+    Name: 'KnockBack'
+    Color: '&7'
+    BookColor: '&b&l'
+    MaxPower: 5
+    Info:
+      Name: '&e&lKnockBack &7(&bI-&bV&7)'
+      Description:
+        - '&7Add KnockBack to your sword '
+        - '&7when you have a few life.'
+        - ''
+        - '&6Found in:'
+        - '&7 - &a&l&nCommon'
+        - '&7 - &9&l&nRare'
+        - '&7 - &4&l&nLegendary'
+        - '&6Enchantable Items: &aSwords'
+    Categories:
+      - 'Common'
+      - 'Rare'
+      - 'Legendary'
   Headless:
     Enabled: True
     Name: 'Headless'
@@ -1112,6 +1217,27 @@ Enchantments:
       - 'Common'
       - 'Rare'
       - 'Legendary'
+  Frozen:
+    Enabled: True
+    Name: 'Frozen'
+    Color: '&7'
+    BookColor: '&b&l'
+    MaxPower: 5
+    Info:
+      Name: '&e&lFrozen &7(&bI-&bV&7)'
+      Description:
+        - '&7Freeze your enemy'
+        - '&7when you have a few life.'
+        - ''
+        - '&6Found in:'
+        - '&7 - &a&l&nCommon'
+        - '&7 - &9&l&nRare'
+        - '&7 - &4&l&nLegendary'
+        - '&6Enchantable Items: &aSwords'
+    Categories:
+      - 'Common'
+      - 'Rare'
+      - 'Legendary'
   Snare:
     Enabled: True
     Name: 'Snare'
@@ -1171,6 +1297,27 @@ Enchantments:
         - '&7 - &9&l&nRare'
         - '&7 - &4&l&nLegendary'
         - '&6Enchantable Items: &aSwords'
+    Categories:
+      - 'Common'
+      - 'Rare'
+      - 'Legendary'
+  WitherAxe:
+    Enabled: True
+    Name: 'WitherAxe'
+    Color: '&7'
+    BookColor: '&b&l'
+    MaxPower: 3
+    Info:
+      Name: '&e&lWitherAxe &7(&bI-&bIII&7)'
+      Description:
+        - '&7Has a chance to give'
+        - '&7your enemy high wither.'
+        - ''
+        - '&6Found in:'
+        - '&7 - &a&l&nCommon'
+        - '&7 - &9&l&nRare'
+        - '&7 - &4&l&nLegendary'
+        - '&6Enchantable Items: &aAxes'
     Categories:
       - 'Common'
       - 'Rare'
@@ -1501,6 +1648,69 @@ Enchantments:
       Description:
         - '&7Allows you to fly in your'
         - '&7own territory.'
+        - ''
+        - '&6Found in:'
+        - '&7 - &a&l&nCommon'
+        - '&7 - &9&l&nRare'
+        - '&7 - &4&l&nLegendary'
+        - '&6Enchantable Items: &aBoots'
+    Categories:
+      - 'Common'
+      - 'Rare'
+      - 'Legendary'
+  FireMan:
+    Enabled: True
+    Name: 'FireMan'
+    Color: '&7'
+    BookColor: '&b&l'
+    MaxPower: 1
+    Info:
+      Name: '&e&lFireMan &7(&bI&7)'
+      Description:
+        - '&7Dai fuoco ad'
+        - '&7un player nel raggio di 3 blocchi.'
+        - ''
+        - '&6Found in:'
+        - '&7 - &a&l&nCommon'
+        - '&7 - &9&l&nRare'
+        - '&7 - &4&l&nLegendary'
+        - '&6Enchantable Items: &aBoots'
+    Categories:
+      - 'Common'
+      - 'Rare'
+      - 'Legendary'
+  Thorns:
+    Enabled: True
+    Name: 'Thorns'
+    Color: '&7'
+    BookColor: '&b&l'
+    MaxPower: 1
+    Info:
+      Name: '&e&lThorns &7(&bI&7)'
+      Description:
+        - '&7Have a big knockback'
+        - '&7when a player hit you.'
+        - ''
+        - '&6Found in:'
+        - '&7 - &a&l&nCommon'
+        - '&7 - &9&l&nRare'
+        - '&7 - &4&l&nLegendary'
+        - '&6Enchantable Items: &aBoots'
+    Categories:
+      - 'Common'
+      - 'Rare'
+      - 'Legendary'
+  Horse:
+    Enabled: True
+    Name: 'Horse'
+    Color: '&7'
+    BookColor: '&b&l'
+    MaxPower: 1
+    Info:
+      Name: '&e&lHorse &7(&bI&7)'
+      Description:
+        - '&7Get an horse'
+        - '&7when you have a few life.'
         - ''
         - '&6Found in:'
         - '&7 - &a&l&nCommon'

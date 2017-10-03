@@ -37,6 +37,7 @@ import it.endless.endlessEnchants.enchantments.Tools;
 import it.endless.endlessEnchants.multisupport.Version;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
@@ -62,6 +63,8 @@ public class Main extends JavaPlugin implements Listener {
 	public static CrazyEnchantments CE = CrazyEnchantments.getInstance();
 	public static SettingsManager settings = SettingsManager.getInstance();
 	public static CustomEnchantments CustomE = CustomEnchantments.getInstance();
+	public static ArrayList<String> horsePl = new ArrayList<String>();
+	
 	
 	@Override
 	public void onEnable() {
@@ -124,15 +127,16 @@ public class Main extends JavaPlugin implements Listener {
 		new BukkitRunnable() {
 			@Override
 			public void run() {
+				horsePl.clear();
 				for(CEPlayer player : CE.getCEPlayers()) {
 					CE.backupCEPlayer(player);
 				}
 				if(settings.getConfig().contains("Settings.Player-Info-Backup-Message")) {
 					if(settings.getConfig().getBoolean("Settings.Player-Info-Backup-Message")) {
-						Bukkit.getLogger().log(Level.INFO, "[Crazy Enchantments]>> All player data has been backed up. Next back up is in 5 minutes.");
+						Bukkit.getLogger().log(Level.INFO, "[Endless Enchantments]>> All player data has been backed up. Next back up is in 5 minutes.");
 					}
 				}else {
-					Bukkit.getLogger().log(Level.INFO, "[Crazy Enchantments]>> All player data has been backed up. Next back up is in 5 minutes.");
+					Bukkit.getLogger().log(Level.INFO, "[Endless Enchantments]>> All player data has been backed up. Next back up is in 5 minutes.");
 				}
 			}
 		}.runTaskTimerAsynchronously(this, 5 * 20 * 60, 5 * 20 * 60);
@@ -169,7 +173,7 @@ public class Main extends JavaPlugin implements Listener {
 			Tinkerer.openTinker(player);
 			return true;
 		}
-		if(commandLable.equalsIgnoreCase("CE") || commandLable.equalsIgnoreCase("CrazyEnchantments") || commandLable.equalsIgnoreCase("enchanter")) {
+		if(commandLable.equalsIgnoreCase("Ee") || commandLable.equalsIgnoreCase("EndlessEnchants") || commandLable.equalsIgnoreCase("enchanter")) {
 			if(args.length == 0) {
 				if(!(sender instanceof Player)) {
 					sender.sendMessage(Methods.getPrefix() + Methods.color(msg.getString("Messages.Players-Only")));
@@ -183,24 +187,24 @@ public class Main extends JavaPlugin implements Listener {
 			if(args.length >= 1) {
 				if(args[0].equalsIgnoreCase("Help")) {
 					if(!Methods.hasPermission(sender, "access", true)) return true;
-					sender.sendMessage(Methods.color("&2&l&nCrazy Enchantments"));
-					sender.sendMessage(Methods.color("&b/CE - &9Opens the GUI."));
+					sender.sendMessage(Methods.color("&2&l&nEndless Enchants"));
+					sender.sendMessage(Methods.color("&b/Ee - &9Opens the GUI."));
 					sender.sendMessage(Methods.color("&b/Tinker - &9Opens up the Tinkerer."));
 					sender.sendMessage(Methods.color("&b/BlackSmith - &9Opens up the Black Smith."));
 					sender.sendMessage(Methods.color("&b/GKitz [Kit] [Player] - &9Open the GKitz GUI or get a GKit."));
 					sender.sendMessage(Methods.color("&b/GKitz Reset <Kit> [Player] - &9Reset a players gkit cooldown."));
-					sender.sendMessage(Methods.color("&b/CE Help - &9Shows all CE Commands."));
-					sender.sendMessage(Methods.color("&b/CE Info [Enchantment] - &9Shows info on all Enchantmnets."));
-					sender.sendMessage(Methods.color("&b/CE Reload - &9Reloads the Config.yml."));
-					sender.sendMessage(Methods.color("&b/CE Remove <Enchantment> - &9Removes an enchantment from the item in your hand."));
-					sender.sendMessage(Methods.color("&b/CE Add <Enchantment> [LvL] - &9Adds an enchantment to the item in your hand."));
-					sender.sendMessage(Methods.color("&b/CE Spawn <Enchantment/Category> [(Level:#/Min-Max)/World:<World>/X:#/Y:#/Z:#] - &9Drops an enchantment book where you tell it to."));
-					sender.sendMessage(Methods.color("&b/CE Scroll <Black/White/Transmog> [Amount] [Player] - &9Gives a player scrolls."));
-					sender.sendMessage(Methods.color("&b/CE Crystal [Amount] [Player] - &9Gives a player Protection Crystal."));
-					sender.sendMessage(Methods.color("&b/CE Scrambler [Amount] [Player] - &9Gives a player Scramblers."));
-					sender.sendMessage(Methods.color("&b/CE Dust <Success/Destroy/Mystery> [Amount] [Player] [Percent] - &9Give a player a some Magical Dust."));
-					sender.sendMessage(Methods.color("&b/CE Book <Enchantment> [Lvl/Min-Max] [Amount] [Player] - &9Gives a player a Enchantment Book."));
-					sender.sendMessage(Methods.color("&b/CE LostBook <Category> [Amount] [Player] - &9Gives a player a Lost Book."));
+					sender.sendMessage(Methods.color("&b/Ee Help - &9Shows all Ee Commands."));
+					sender.sendMessage(Methods.color("&b/Ee Info [Enchantment] - &9Shows info on all Enchantmnets."));
+					sender.sendMessage(Methods.color("&b/Ee Reload - &9Reloads the Config.yml."));
+					sender.sendMessage(Methods.color("&b/Ee Remove <Enchantment> - &9Removes an enchantment from the item in your hand."));
+					sender.sendMessage(Methods.color("&b/Ee Add <Enchantment> [LvL] - &9Adds an enchantment to the item in your hand."));
+					sender.sendMessage(Methods.color("&b/Ee Spawn <Enchantment/Category> [(Level:#/Min-Max)/World:<World>/X:#/Y:#/Z:#] - &9Drops an enchantment book where you tell it to."));
+					sender.sendMessage(Methods.color("&b/Ee Scroll <Black/White/Transmog> [Amount] [Player] - &9Gives a player scrolls."));
+					sender.sendMessage(Methods.color("&b/Ee Crystal [Amount] [Player] - &9Gives a player Protection Crystal."));
+					sender.sendMessage(Methods.color("&b/Ee Scrambler [Amount] [Player] - &9Gives a player Scramblers."));
+					sender.sendMessage(Methods.color("&b/Ee Dust <Success/Destroy/Mystery> [Amount] [Player] [Percent] - &9Give a player a some Magical Dust."));
+					sender.sendMessage(Methods.color("&b/Ee Book <Enchantment> [Lvl/Min-Max] [Amount] [Player] - &9Gives a player a Enchantment Book."));
+					sender.sendMessage(Methods.color("&b/Ee LostBook <Category> [Amount] [Player] - &9Gives a player a Lost Book."));
 					return true;
 				}
 				if(args[0].equalsIgnoreCase("Reload")) {
@@ -842,7 +846,7 @@ public class Main extends JavaPlugin implements Listener {
 					CEPlayer p = CE.getCEPlayer(player);
 					String name = kit.getDisplayItem().getItemMeta().getDisplayName();
 					if(p.hasGkitPermission(kit) || args.length >= 2) {
-						if(p.canUseGKit(kit) || sender.hasPermission("crazyenchantments.admin")) {
+						if(p.canUseGKit(kit) || sender.hasPermission("endlessenchantments.admin")) {
 							p.giveGKit(kit);
 							player.sendMessage(Methods.getPrefix() + Methods.color(msg.getString("Messages.Received-GKit").replaceAll("%Kit%", name).replaceAll("%kit%", name)));
 							if(!player.getName().equalsIgnoreCase(sender.getName())) {
@@ -881,7 +885,7 @@ public class Main extends JavaPlugin implements Listener {
 			@Override
 			public void run() {
 				if(player.getName().equals("BadBones69")) {
-					player.sendMessage(Methods.getPrefix() + Methods.color("&7This server is running your Crazy Enchantments Plugin. " + "&7It is running version &av" + Bukkit.getServer().getPluginManager().getPlugin("CrazyEnchantments").getDescription().getVersion() + "&7."));
+					player.sendMessage(Methods.getPrefix() + Methods.color("&7This server is running your Endless Enchantments Plugin. " + "&7It is running version &av" + Bukkit.getServer().getPluginManager().getPlugin("EndlessEnchants").getDescription().getVersion() + "&7."));
 				}
 				if(player.isOp()) {
 					if(settings.getConfig().contains("Settings.Update-Checker")) {

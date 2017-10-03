@@ -641,6 +641,10 @@ public class CrazyEnchantments {
 		enchants.put(CEnchantments.BURNSHIELD, new HashMap<PotionEffectType, Integer>());
 		enchants.get(CEnchantments.BURNSHIELD).put(PotionEffectType.FIRE_RESISTANCE, -1);
 		
+		enchants.put(CEnchantments.POWER, new HashMap<PotionEffectType, Integer>());
+		enchants.get(CEnchantments.POWER).put(PotionEffectType.SLOW, -1);
+		enchants.get(CEnchantments.POWER).put(PotionEffectType.INCREASE_DAMAGE, -1);
+		
 		enchants.put(CEnchantments.DRUNK, new HashMap<PotionEffectType, Integer>());
 		enchants.get(CEnchantments.DRUNK).put(PotionEffectType.INCREASE_DAMAGE, -1);
 		enchants.get(CEnchantments.DRUNK).put(PotionEffectType.SLOW_DIGGING, -1);

@@ -12,7 +12,11 @@ import java.util.ArrayList;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Horse;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -26,7 +30,7 @@ import org.bukkit.plugin.Plugin;
 public class Boots implements Listener {
 	
 	private static Plugin plugin = Bukkit.getServer().getPluginManager().getPlugin("EndlessEnchants");
-	
+	private int id = 0;
 	public static ArrayList<Player> Flying = new ArrayList<Player>();
 	
 	@EventHandler
@@ -142,6 +146,39 @@ public class Boots implements Listener {
 					}
 					if(player.isFlying()) {
 						Flying.add(player);
+					}
+				}
+			}
+			
+			if(Main.CE.hasEnchantment(boots, CEnchantments.FIREMAN)) {
+				if(CEnchantments.FIREMAN.isEnabled()) {
+						for (Player other : Bukkit.getOnlinePlayers()) {
+							if(other.getName().equalsIgnoreCase(player.getName())) continue;
+							  if (other.getLocation().distance(player.getLocation()) <= 3) {
+							    other.setFireTicks(40);
+							  }
+						} 
+				}
+			}
+			
+			if(Main.CE.hasEnchantment(boots, CEnchantments.THORNS)) {
+				if(CEnchantments.THORNS.isEnabled()) {
+					if(player.getHealth() <= 2) {
+						player.getInventory().getBoots().addEnchantment(Enchantment.THORNS, 3);
+					}else{
+						player.getInventory().getBoots().removeEnchantment(Enchantment.THORNS);
+					}
+				}
+			}
+			
+			if(Main.CE.hasEnchantment(boots, CEnchantments.HORSE)) {
+				if(CEnchantments.HORSE.isEnabled()) {
+					if(player.getHealth() <= 2 && !Main.horsePl.contains(player.getName())) {
+						Main.horsePl.add(player.getName());
+						Horse h = (Horse) player.getWorld().spawnEntity(player.getLocation(), EntityType.HORSE);
+						h.setTamed(true);
+						h.getInventory().setSaddle(new ItemStack(Material.SADDLE, 1));
+						
 					}
 				}
 			}

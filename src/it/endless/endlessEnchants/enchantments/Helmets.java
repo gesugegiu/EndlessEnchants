@@ -47,6 +47,15 @@ public class Helmets implements Listener {
 					}
 				}
 			}
+			if(Main.CE.hasEnchantment(NewItem, CEnchantments.SUB)) {
+				if(CEnchantments.SUB.isEnabled()) {
+					EnchantmentUseEvent event = new EnchantmentUseEvent(player, CEnchantments.SUB, NewItem);
+					Bukkit.getPluginManager().callEvent(event);
+					if(!event.isCancelled()) {
+						player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, time, Main.CE.getPower(NewItem, CEnchantments.SUB) - 1));
+					}
+				}
+			}
 		}
 		if(Main.CE.hasEnchantments(OldItem)) {
 			if(Main.CE.hasEnchantment(OldItem, CEnchantments.GLOWING)) {
@@ -56,6 +65,11 @@ public class Helmets implements Listener {
 			}
 			if(Main.CE.hasEnchantment(OldItem, CEnchantments.MERMAID)) {
 				if(CEnchantments.MERMAID.isEnabled()) {
+					player.removePotionEffect(PotionEffectType.WATER_BREATHING);
+				}
+			}
+			if(Main.CE.hasEnchantment(OldItem, CEnchantments.SUB)) {
+				if(CEnchantments.SUB.isEnabled()) {
 					player.removePotionEffect(PotionEffectType.WATER_BREATHING);
 				}
 			}

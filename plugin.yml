@@ -1,15 +1,14 @@
 name: EndlessEnchants
 author: EndlessTeamWork
 main: it.endless.endlessEnchants.Main
-version: 1.7.9.3.2
-softdepend: [Vault, Factions, WorldEdit, SilkSpawners, Feudal, ASkyBlock, Kingdoms, Spartan, CoreProtect, StackMob]
-website: https://www.spigotmc.org/resources/16470/
+version: 1.0
+softdepend: [Vault, Factions, WorldEdit]
 description: >
-             A Plugin full of Crazy Enchantments.
+             A Plugin full of Custom Enchantments.
 commands:
-  crazyenchantments:
+  endlessEnchants:
     description: Opens the Enchanter GUI.
-    aliases: [ce, enchanter]
+    aliases: [ee, enchanter]
   tinkerer:
     description: Opens the Tinker GUI.
     aliases: tinker

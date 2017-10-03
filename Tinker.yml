@@ -62,6 +62,9 @@ Tinker:
     BurnShield:
       Items: 20
       Book: 5
+    Power:
+      Items: 20
+      Book: 5
     Piercing:
       Items: 20
       Book: 5
@@ -81,6 +84,9 @@ Tinker:
       Items: 20
       Book: 5
     Mermaid:
+      Items: 20
+      Book: 5
+    Sub:
       Items: 20
       Book: 5
     Ninja:
@@ -126,6 +132,9 @@ Tinker:
       Items: 20
       Book: 5
     FeedMe:
+      Items: 20
+      Book: 5
+    DannoDoppio:
       Items: 20
       Book: 5
     Dizzy:
@@ -194,6 +203,9 @@ Tinker:
     Execute:
       Items: 20
       Book: 5
+    KnockBack:
+      Items: 20
+      Book: 5
     Headless:
       Items: 20
       Book: 5
@@ -224,7 +236,22 @@ Tinker:
     Wither:
       Items: 20
       Book: 5
+    ConfusionAxe:
+      Items: 20
+      Book: 5
+    Frozen:
+      Items: 20
+      Book: 5
+    WitherAze:
+      Items: 20
+      Book: 5
     Rage:
+      Items: 20
+      Book: 5
+    Thorns:
+      Items: 20
+      Book: 5
+    Horse:
       Items: 20
       Book: 5
     Valor:
@@ -270,6 +297,9 @@ Tinker:
       Items: 20
       Book: 5
     Wings:
+      Items: 20
+      Book: 5
+    FireMan:
       Items: 20
       Book: 5
     Blast:

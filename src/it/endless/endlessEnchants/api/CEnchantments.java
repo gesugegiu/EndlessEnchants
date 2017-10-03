@@ -14,6 +14,9 @@ public enum CEnchantments {
 	ROCKET("Rocket", EnchantmentType.BOOTS),
 	SPRINGS("Springs", EnchantmentType.BOOTS),
 	ANTIGRAVITY("AntiGravity", EnchantmentType.BOOTS),
+	FIREMAN("FireMan", EnchantmentType.BOOTS),
+	THORNS("Thorns", EnchantmentType.BOOTS),
+	HORSE("Horse", EnchantmentType.BOOTS),
 //	----------------Bows----------------  \\
 	BOOM("Boom", EnchantmentType.BOW),
 	PULL("Pull", EnchantmentType.BOW),
@@ -28,6 +31,7 @@ public enum CEnchantments {
 	MERMAID("Mermaid", EnchantmentType.HELMET),
 	IMPLANTS("Implants", EnchantmentType.HELMET),
 	COMMANDER("Commander", EnchantmentType.HELMET),
+	SUB("Sub", EnchantmentType.HELMET),
 //	----------------Swords----------------  \\
 	TRAP("Trap", EnchantmentType.SWORD),
 	RAGE("Rage", EnchantmentType.SWORD),
@@ -50,6 +54,8 @@ public enum CEnchantments {
 	INQUISITIVE("Inquisitive", EnchantmentType.SWORD),
 	LIGHTWEIGHT("LightWeight", EnchantmentType.SWORD),
 	DOUBLEDAMAGE("DoubleDamage", EnchantmentType.SWORD),
+	KNOCKBACK("KnockBack", EnchantmentType.SWORD),
+	FROZEN("Frozen", EnchantmentType.SWORD),
 //	----------------Armor----------------  \\
 	HULK("Hulk", EnchantmentType.ARMOR),
 	VALOR("Valor", EnchantmentType.ARMOR),
@@ -82,6 +88,7 @@ public enum CEnchantments {
 	STORMCALLER("StormCaller", EnchantmentType.ARMOR),
 	ENLIGHTENED("Enlightened", EnchantmentType.ARMOR),
 	SELFDESTRUCT("SelfDestruct", EnchantmentType.ARMOR),
+	POWER("Power", EnchantmentType.ARMOR),
 //	----------------Axes----------------  \\
 	REKT("Rekt", EnchantmentType.AXE),
 	DIZZY("Dizzy", EnchantmentType.AXE),
@@ -90,6 +97,9 @@ public enum CEnchantments {
 	BERSERK("Berserk", EnchantmentType.AXE),
 	BLESSED("Blessed", EnchantmentType.AXE),
 	DECAPITATION("Decapitation", EnchantmentType.AXE),
+	DANNODOPPIO("DannoDoppio", EnchantmentType.AXE),
+	WITHERAXE("WitherAxe", EnchantmentType.AXE),
+	CONFUSIONAXE("ConfusionAxe", EnchantmentType.AXE),
 //	----------------PickAxes----------------  \\
 	BLAST("Blast", EnchantmentType.PICKAXE),
 	AUTOSMELT("AutoSmelt", EnchantmentType.PICKAXE),
